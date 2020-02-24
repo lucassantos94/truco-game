@@ -1,29 +1,30 @@
 interface CardProps {
   suit: string;
-  baseValue: number;
+  rank: number;
   name: string;
 }
 export class Card {
-
+  
+  // eslint-disable-next-line prettier/prettier
+  #name: string; 
+  #rank: number;
   #suit: string;
-  #name: string;
-  #baseValue: number;
 
-  constructor ( props: CardProps ) {
-    this.#name = props.name
-    this.#suit = props.suit
-    this.#baseValue = props.baseValue
+  constructor (props: CardProps) { 
+    this.#name = props.name;
+    this.#suit = props.suit;
+    this.#rank = props.rank;
+  } 
+ 
+  get name (): string { 
+    return this.#name; 
   }
 
-  get name(){ 
-    return this.#name
-  }
+  get suit (): string {
+    return this.#suit;
+  } 
 
-  get suit(){ 
-    return this.#suit
-  }
-
-  get baseValue(){ 
-    return this.#baseValue
+  get rank (): number {
+    return this.#rank;
   }
 }
