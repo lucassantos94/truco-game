@@ -36,10 +36,10 @@ export class Deck {
     return shuffledStack;
   }
 
-  public draw (): { lastNode:boolean,card:Card } {
-    const lastNode = this.#stack.length === 1 
+  public draw (): { noCard:boolean,card:Card } {
+    const noCard = this.#stack.length === 0 
     return {
-      lastNode,
+      noCard,
       card: this.#stack.pop() as Card
     }
     

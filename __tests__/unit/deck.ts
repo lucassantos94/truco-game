@@ -11,6 +11,22 @@ describe('Deck Entity', () => {
       const deck = new Deck();
       expect(deck.length).toBe(40);
     });
+  });
+  describe('On draw', () => {
+    it('should return a Card', () => {
+      const deck = new Deck();
+      expect(deck.draw().card).toBeInstanceOf(Card);
+    });
+    it('should return true on noCard if no more card', () => {
+      const deck = new Deck();
+      let count = 0;
+      let nocard = false;
+      while (!nocard && count < 42) {
+        nocard = deck.draw().noCard;
+        count++;
+      }
+      expect(nocard).toBe(true);
+    });
     it('should be able to draw 40 unique cards', () => {
       const deck = new Deck();
       const stack = [];
