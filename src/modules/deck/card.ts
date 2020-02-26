@@ -27,4 +27,8 @@ export class Card {
   get rank (): number {
     return this.#rank;
   }
+
+  toString (): string{
+    return `${this.#name} of ${this.#suit}`
+  }
 }
