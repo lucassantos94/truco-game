@@ -1,14 +1,14 @@
-import { Card } from "../deck/card";
-import {v4 as uuid} from "uuid";
+import { Card } from '../deck/card';
+import { v4 as uuid } from 'uuid';
 
 export class Player {
   #id: string;
   #name: string;
   #hand: Card[];
-  constructor ( name: string ) {
+  constructor (name: string) {
     this.#name = name;
     this.#id = uuid();
-    this.#hand = []
+    this.#hand = [];
   }
 
   get name ():string {
@@ -19,7 +19,7 @@ export class Player {
     return this.#id;
   }
 
-  get hand (): Card[]{
-    return [ ... this.#hand]
+  get hand (): Card[] {
+    return [...this.#hand];
   }
 }

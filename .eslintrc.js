@@ -8,7 +8,6 @@ module.exports = {
     'standard',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -23,6 +22,7 @@ module.exports = {
   rules: {
     'no-useless-constructor': [ 0 ],
     '@typescript-eslint/interface-name-prefix': [ 0 ],
-    '@typescript-eslint/no-explicit-any': [ 0 ]
+    '@typescript-eslint/no-explicit-any': [ 0 ],
+    'semi':[1,'always']
   },
 };
