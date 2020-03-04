@@ -10,8 +10,8 @@ describe('Game', () => {
       const fivePlayers = [...Array(5)].map((name, index) => new Player(`Player ${index}`));
       const threePlayers = [...Array(3)].map((name, index) => new Player(`Player ${index}`));
       expect(new Game(fourPlayers)).toBeInstanceOf(Game);
-      expect(new Game(threePlayers)).toThrowError();
-      expect(new Game(fivePlayers)).toThrowError();
+      expect(() => new Game(threePlayers)).toThrowError('Incorrect number of players');
+      expect(() => new Game(fivePlayers)).toThrowError('Incorrect number of players');
     });
     it('should start with 0:0 score', () => {
       const game = new Game(fourPlayers);
@@ -29,6 +29,12 @@ describe('Game', () => {
       const initialRounds = game.rounds;
       game.startRound();
       expect(initialRounds).not.toStrictEqual(game.rounds);
+    });
+    it('should only add one round when another is finished', () => {
+      const game = new Game(fourPlayers);
+      const initialRounds = game.rounds;
+      game.startRound();
+      expect(() => game.startRound()).toThrowError();
     });
   });
 
