@@ -13,7 +13,7 @@ export class Round {
     return { status: this.#status };
   }
 
-  public finish () {
+  public finish ():void {
     this.#status = 'finished';
   }
 }

@@ -32,7 +32,6 @@ describe('Game', () => {
     });
     it('should only add one round when another is finished', () => {
       const game = new Game(fourPlayers);
-      const initialRounds = game.rounds;
       game.startRound();
       expect(() => game.startRound()).toThrowError();
     });
