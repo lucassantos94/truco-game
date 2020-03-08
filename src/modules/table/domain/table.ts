@@ -1,11 +1,11 @@
-import { Player } from '../game/player';
+import { Player } from '../../game/player';
 type playerOrNull = Player | null;
 
 export class Table {
   public teams: [[playerOrNull, playerOrNull], [playerOrNull, playerOrNull]];
-  constructor () {
+  constructor (player:Player) {
     this.teams = [
-      [null, null],
+      [player, null],
       [null, null]
     ];
   }

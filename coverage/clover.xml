@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583323595169" clover="3.2.0">
-  <project timestamp="1583323595170" name="All files">
+<coverage generated="1583686049612" clover="3.2.0">
+  <project timestamp="1583686049612" name="All files">
     <metrics statements="65" coveredstatements="64" conditionals="6" coveredconditionals="6" methods="26" coveredmethods="25" elements="97" coveredelements="95" complexity="0" loc="65" ncloc="65" packages="3" files="6" classes="6"/>
     <package name="deck">
       <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
@@ -30,8 +30,8 @@
         <line num="28" count="7" type="stmt"/>
         <line num="29" count="280" type="stmt"/>
         <line num="32" count="7" type="stmt"/>
-        <line num="33" count="292" type="stmt"/>
-        <line num="34" count="292" type="stmt"/>
+        <line num="33" count="295" type="stmt"/>
+        <line num="34" count="295" type="stmt"/>
         <line num="36" count="7" type="stmt"/>
         <line num="40" count="162" type="stmt"/>
         <line num="41" count="162" type="stmt"/>
@@ -65,14 +65,14 @@
       </file>
       <file name="player.ts" path="/home/lucas/Documents/offshore/truco-game/src/modules/game/player.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="15" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
-        <line num="7" count="15" type="stmt"/>
-        <line num="9" count="15" type="stmt"/>
-        <line num="10" count="15" type="stmt"/>
-        <line num="11" count="15" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
+        <line num="11" count="17" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
@@ -86,12 +86,12 @@
         <line num="17" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="table">
+    <package name="table.domain">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="table.ts" path="/home/lucas/Documents/offshore/truco-game/src/modules/table/table.ts">
+      <file name="table.ts" path="/home/lucas/Documents/offshore/truco-game/src/modules/table/domain/table.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
     </package>
   </project>
