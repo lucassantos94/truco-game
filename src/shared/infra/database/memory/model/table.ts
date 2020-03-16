@@ -1,5 +1,6 @@
+
 type Table = {
-  id: uuid,
+  id: string,
   teams: [ [ string, string ], [ string, string ] ],
 }
 export class TableModel {
@@ -8,7 +9,7 @@ export class TableModel {
     this.#tables = [];
   }
 
-  public save (table: Table):Promise<void> {
+  public async create (table: Table):Promise<void> {
     this.#tables.push(table);
   }
 
