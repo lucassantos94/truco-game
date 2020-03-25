@@ -9,7 +9,7 @@ export class CreateTable {
   }
 
   public async execute (player: Player):Promise<Table> {
-    const table = new Table(player);
+    const table = Table.create(player);
     await this.#tableRepo.create(table);
     return table;
   }

@@ -4,12 +4,14 @@ describe('Table', () => {
   describe('on initialization', () => {
     test('should be initialized with at least one player', () => {
       const player = new Player('player one');
-      const table = new Table(player);
+      const table = Table.create(player);
+
       expect(table).toBeInstanceOf(Table);
     });
     test('should have two teams', () => {
       const player = new Player('player one');
-      const table = new Table(player);
+      const table = Table.create(player);
+
       expect(table.teams.length).toBe(2);
     });
   });

@@ -10,11 +10,11 @@ export class JoinTable {
 
   public async execute (player: Player, tableId:string):Promise<Table> {
     let table: Table = await this.#tableRepo.getById(tableId);
-    console.log(table);
-    if (!table) {
-      table = new Table(player);
-    } else {
+
+    if (table) {
       table.addPlayer(player);
+    } else {
+      table = Table.create(player, tableId);
     }
     this.#tableRepo.update(table);
     return table;

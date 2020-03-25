@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 
 describe('joinTable', () => {
   describe('execute', () => {
-    test('should need a player and a tableId and return a Table instance', async () => {
+    test('if tableId exists, add player to the table', async () => {
       const playerOne = new Player('player one');
       const playerTwo = new Player('player two');
       const table = await createTable.execute(playerOne);
@@ -16,9 +16,13 @@ describe('joinTable', () => {
     test('should create a new table with player inside case table id not exists', async () => {
       const player = new Player('player one');
       const id = uuid();
-      const table = await joinTable.execute(player, uuid());
+      const table = await joinTable.execute(player, id);
       expect(table.id).toBe(id);
-      expect(table.teams.flat()).toContain(player.id);
+      expect(
+        table.teams
+          .flat<(Player | null)[]>()
+          .some((teamPlayer: Player | null) => teamPlayer && teamPlayer.id === player.id)
+      ).toBe(true);
     });
   });
 })
