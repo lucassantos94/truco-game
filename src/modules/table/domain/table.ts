@@ -11,7 +11,6 @@ export class Table {
     this.#id = id;
   }
 
-  // public restore ()
   get teams (): Teams {
     return this.#teams;
   }

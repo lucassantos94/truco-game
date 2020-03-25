@@ -11,8 +11,8 @@ export class TableRepo implements ITableRepo {
     return { id: table.id, teams: table.teams.map(team => team.map(player => player ? player.name : player)) };
   }
 
-  public async create (table: Table):Promise<void> {
-    this.#tableDb.create(this.toRepo(table));
+  public async create (table: Table): Promise<void> {
+    return this.#tableDb.create(this.toRepo(table));
   }
 
   public async getById (id: string): Promise<Table | undefined> {

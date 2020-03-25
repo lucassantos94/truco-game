@@ -19,7 +19,10 @@ export class TableModel {
 
   public async update (table: Table):Promise<void> {
     const index = this.#tables.findIndex(dbTable => dbTable.id === table.id);
-    if (index === -1) { throw new Error('table not found'); }
-    this.#tables[index] = table;
+    if (index >= 0) {
+      this.#tables[index] = table;
+    } else {
+      await this.create(table);
+    }
   }
 }

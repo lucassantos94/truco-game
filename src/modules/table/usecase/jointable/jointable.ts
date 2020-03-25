@@ -16,7 +16,7 @@ export class JoinTable {
     } else {
       table = Table.create(player, tableId);
     }
-    this.#tableRepo.update(table);
+    await this.#tableRepo.update(table);
     return table;
   }
 }

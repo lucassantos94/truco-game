@@ -10,8 +10,8 @@ describe('joinTable', () => {
       const playerOne = new Player('player one');
       const playerTwo = new Player('player two');
       const table = await createTable.execute(playerOne);
-
-      expect(await joinTable.execute(playerTwo, table.id)).toBeInstanceOf(Table);
+      const joinedTable = await joinTable.execute(playerTwo, table.id);
+      expect(joinedTable).toBeInstanceOf(Table);
     });
     test('should create a new table with player inside case table id not exists', async () => {
       const player = new Player('player one');
